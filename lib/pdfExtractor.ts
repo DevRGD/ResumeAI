@@ -1,15 +1,12 @@
 import { Buffer } from 'buffer';
-import { PDFParse } from 'pdf-parse';
+import pdf from 'pdf-parse';
 
 export default async function extractTextFromPDF(arrayBuffer: ArrayBuffer): Promise<string> {
   try {
     const buffer = Buffer.from(arrayBuffer);
-    const parser = new PDFParse({ data: buffer });
-    const data = await parser.getText();
+    const data = await pdf(buffer);
 
-    if (!data || typeof data.text !== 'string') {
-      throw new Error('PDF parsed but no text content found');
-    }
+    if (!data || !data.text) throw new Error('PDF parsed but no text content found');
 
     return data.text.replace(/\n\s*\n/g, '\n').trim();
   } catch (error: unknown) {
