@@ -5,7 +5,7 @@ import { ArrowRight, Zap, Target, ShieldCheck, Sparkles } from 'lucide-react';
 export default function Home() {
   return (
     <div className="grow flex flex-col justify-center pt-2">
-      <div className="mx-auto px-12 py-12 lg:py-24">
+      <div className="mx-auto px-12 py-12 lg:py-24 w-full max-w-360">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="text-left space-y-8 relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-medium uppercase tracking-wider">
@@ -13,14 +13,14 @@ export default function Home() {
               Advanced Resume Intelligence
             </div>
 
-            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
               Match Your Resume <br />
               <span className="text-transparent bg-clip-text bg-linear-to-b from-gold-400 via-gold-500 to-gold-600">
                 To Your Dream Job.
               </span>
             </h1>
 
-            <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
+            <p className="text-sm md:text-lg text-slate-400 leading-relaxed max-w-xl">
               Don&apos;t leave your career to chance. Our Llama 3.3 powered engine analyzes your resume against specific
               job descriptions to identify missing keywords, score your compatibility, and generate tactical
               improvements to bypass ATS filters.
@@ -91,8 +91,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mx-auto px-12 py-12 lg:py-24">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-360 text-left">
+      <div className="mx-auto px-12 py-12 lg:py-24 w-full max-w-360">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
           <div className="group p-8 rounded-md bg-slate-900/50 border border-white/5 hover:border-teal-500/30 hover:bg-slate-900/80 transition-all duration-300 backdrop-blur-sm">
             <div className="w-12 h-12 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-6 text-teal-400 group-hover:scale-110 transition-transform">
               <Zap size={24} />
